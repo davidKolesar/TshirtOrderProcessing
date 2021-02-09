@@ -1,9 +1,3 @@
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.AssemblyInfoInputs.cache
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.AssemblyInfo.cs
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.csproj.CoreCompileInputs.cache
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.RazorAssemblyInfo.cache
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.RazorAssemblyInfo.cs
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\bin\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.exe
@@ -27,6 +21,13 @@ C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWe
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.csprojAssemblyReference.cache
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.AssemblyInfoInputs.cache
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.AssemblyInfo.cs
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.csproj.CoreCompileInputs.cache
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.RazorAssemblyInfo.cache
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.RazorAssemblyInfo.cs
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\staticwebassets\TeeShirtOrderingWebApplication.StaticWebAssets.Manifest.cache
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\staticwebassets\TeeShirtOrderingWebApplication.StaticWebAssets.xml
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\scopedcss\bundle\TeeShirtOrderingWebApplication.styles.css
@@ -47,4 +48,3 @@ C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWe
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.dll
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.pdb
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.genruntimeconfig.cache
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.csprojAssemblyReference.cache
