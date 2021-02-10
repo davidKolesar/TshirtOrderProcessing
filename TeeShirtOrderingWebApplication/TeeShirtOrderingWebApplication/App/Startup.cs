@@ -19,14 +19,14 @@ namespace OrderProcessingApplication
         {
 
             var dbCon = Data.DBConnection.Instance();
-            dbCon.Server = "YourServer";
-            dbCon.DatabaseName = "YourDatabase";
-            dbCon.UserName = "YourUsername";
-            dbCon.Password = "YourPassword";
+            dbCon.Server = "127.0.0.1";
+            dbCon.DatabaseName = "ShirtOrderApplication";
+            dbCon.UserName = "root";
+            dbCon.Password = "password";
             if (dbCon.IsConnect())
             {
                 //suppose col0 and col1 are defined as VARCHAR in the DB
-                string query = "SELECT col0,col1 FROM YourTable";
+                string query = "SELECT col0,col1 FROM order_table";
                 MySqlCommand cmd = new MySqlCommand(query, dbCon.Connection);
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -59,5 +59,4 @@ namespace OrderProcessingApplication
             });
         }
     }
-}
-*/
+}*/

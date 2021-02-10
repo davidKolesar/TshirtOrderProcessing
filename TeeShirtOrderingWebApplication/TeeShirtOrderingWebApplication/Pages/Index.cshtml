@@ -1,13 +1,13 @@
 ﻿@page
-@model IndexModel
+@model OrderProcessingApplication.Model.Order
 @{
     ViewData["Title"] = "Shirt Ordering Application";
 }
 
 <div class="text-center">
     <h1 class="display-4">Shirt Ordering Application</h1>
-    <legend>Process an order</legend>
-    <form method="post" action="processOrder.cshtml">
+    <p>Process an order</p>
+    <form id="submitOrderForm" action="/ProcessNewOrder" method="post">
         <fieldset>
             <!--Name-->
             <label for="fname">First name:</label><br>
@@ -21,10 +21,9 @@
 
             <!--phone-->
             <label for="phone">Phone:</label><br>
-            <input type="text" id="phone" name="phone" required><br><br>
-            
+            <input type="number" id="phone" name="phone" required><br><br>
+
             <!--color-->
-            <p></p>
             <label for="color">Color:</label><br>
             <select name="color" id="color" required>
                 <option value="Red">Red</option>
