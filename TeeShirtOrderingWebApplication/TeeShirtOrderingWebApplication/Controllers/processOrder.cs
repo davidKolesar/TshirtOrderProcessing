@@ -9,16 +9,27 @@ using System.Threading.Tasks;
 namespace OrderProcessingApplication.Controller
 {
 
+
     [Route("ProcessNewOrder")]
     [ApiController]
     public class processOrder : ControllerBase
     {
         [HttpPost]
-        public String ProcessNewOrder(Order order)
+        public String ProcessNewOrder([FromForm] Order order)
         {
-            
-
-            return "success";
+            return "order received";
         }
     }
+
+    /*    [Route("ProcessNewOrder")]
+        [ApiController]
+        public class processOrder : ControllerBase
+        {
+            [HttpPost]
+            public String ProcessNewOrder()
+            {
+                return "order received";
+            }
+        }
+    */
 }

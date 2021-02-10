@@ -1,40 +1,33 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace OrderProcessingApplication.Model
 {
-    public class Order : Entity
+    public class Order
     {
         
-        public Order(Guid id, DateTime date, string customerName, string customerAddress, string customerPhone, COLOR color, Size size, double price, int quantity, double totalCost, Status status, string notes)
-        {
-
-            DateTime Date = date;
-            string CustomerName = customerName;
-            string CustomerAddress = customerAddress;
-            string CustomerPhone = customerPhone;
-            COLOR Color = color;
-            Size Size = size;
-            double Price = price;
-            int Quantity = quantity;
-            Status Status = status;
-            double TotalCost = totalCost;
-            string Notes = notes;
-
-        }
-
+        public Guid Id { get; set; }
+        [BindProperty]
         public DateTime Date { get; set; }
+        [BindProperty]
         string CustomerName { get; set; }
+        [BindProperty]
         string CustomerAddress { get; set; }
+        [BindProperty]
         string CustomerPhone { get; set; }
+        [BindProperty]
         COLOR Color { get; set; }
+        [BindProperty]
         Size size { get; set; }
+        [BindProperty]
         double price { get; set; }
         int Quantity { get; set; }
         Status Status { get; set; }
         double TotalCost { get; set; }
+        [BindProperty]
         string Notes { get; set; }
     }
 }
