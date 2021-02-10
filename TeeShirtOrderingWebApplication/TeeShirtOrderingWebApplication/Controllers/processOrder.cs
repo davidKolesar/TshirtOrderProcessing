@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace OrderProcessingApplication.Controller
 {
-
-
     [Route("ProcessNewOrder")]
     [ApiController]
     public class processOrder : ControllerBase
@@ -17,19 +15,11 @@ namespace OrderProcessingApplication.Controller
         [HttpPost]
         public String ProcessNewOrder([FromForm] Order order)
         {
+            Guid Id = new Guid();
+
+            DateTime Date = DateTime.Today;
+
             return "order received";
         }
     }
-
-    /*    [Route("ProcessNewOrder")]
-        [ApiController]
-        public class processOrder : ControllerBase
-        {
-            [HttpPost]
-            public String ProcessNewOrder()
-            {
-                return "order received";
-            }
-        }
-    */
 }

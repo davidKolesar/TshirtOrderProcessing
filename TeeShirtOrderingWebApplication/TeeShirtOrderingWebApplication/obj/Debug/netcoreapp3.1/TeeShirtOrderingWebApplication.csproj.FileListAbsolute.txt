@@ -178,4 +178,3 @@ C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWe
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.dll
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.pdb
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.genruntimeconfig.cache
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.csprojAssemblyReference.cache

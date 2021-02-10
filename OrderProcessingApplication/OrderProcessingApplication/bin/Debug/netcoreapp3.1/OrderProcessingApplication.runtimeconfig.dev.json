@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\babyCows\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\babyCows\\.nuget\\packages"
-    ]
-  }
-}

@@ -8,26 +8,24 @@ namespace OrderProcessingApplication.Model
 {
     public class Order
     {
-        
         public Guid Id { get; set; }
-        [BindProperty]
         public DateTime Date { get; set; }
         [BindProperty]
-        string CustomerName { get; set; }
+        public string CustomerName { get; set; }
         [BindProperty]
-        string CustomerAddress { get; set; }
+        public string CustomerAddress { get; set; }
         [BindProperty]
-        string CustomerPhone { get; set; }
+        public string CustomerPhone { get; set; }
         [BindProperty]
-        COLOR Color { get; set; }
+        public COLOR Color { get; set; }
         [BindProperty]
-        Size size { get; set; }
+        public Size size { get; set; }
         [BindProperty]
-        double price { get; set; }
-        int Quantity { get; set; }
-        Status Status { get; set; }
-        double TotalCost { get; set; }
+        public double price { get; set; }
+        public int Quantity { get; set; }
+        public Status Status { get; set; }
+        public double TotalCost { get; set; }
         [BindProperty]
-        string Notes { get; set; }
+        public string Notes { get; set; }
     }
 }
