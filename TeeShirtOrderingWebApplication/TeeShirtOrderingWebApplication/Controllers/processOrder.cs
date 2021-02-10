@@ -15,9 +15,11 @@ namespace OrderProcessingApplication.Controller
         [HttpPost]
         public String ProcessNewOrder([FromForm] Order order)
         {
-            Guid Id = new Guid();
+            //create unique ID for order
+            order.Id = new Guid();
+            //set today's date for order
+            order.Date = DateTime.Today;
 
-            DateTime Date = DateTime.Today;
 
             return "order received";
         }
