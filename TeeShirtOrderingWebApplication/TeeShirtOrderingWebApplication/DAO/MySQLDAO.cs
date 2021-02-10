@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using OrderProcessingApplication.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +9,10 @@ namespace TeeShirtOrderingWebApplication.Controller
 {
     public class MySQLDAO
     {
+        private static String SELECT_ORDER = "SELECT idorder_table, name FROM order_table";
 
-        public void connectToDatabase(string query)
+
+        public Boolean AddOrder(Order order)
         {
             var dbCon = Data.DBConnection.Instance();
             dbCon.Server = "127.0.0.1";
@@ -17,17 +20,18 @@ namespace TeeShirtOrderingWebApplication.Controller
             dbCon.UserName = "root";
             dbCon.Password = "password";
             dbCon.Port = "3306";
+            Boolean success = false;
 
             if (dbCon.IsConnect())
             {
-                executeQuery(dbCon);
+                success = executeQuery(dbCon, order);
             }
+            return success;
         }
 
-        public Boolean executeQuery(Data.DBConnection dbCon)
+        public Boolean executeQuery(Data.DBConnection dbCon, Order order)
         {
-            //suppose col0 and col1 are defined as VARCHAR in the DB
-            string query = "SELECT idorder_table, name FROM order_table";
+
             MySqlCommand cmd = new MySqlCommand(query, dbCon.Connection);
             var reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -39,5 +43,14 @@ namespace TeeShirtOrderingWebApplication.Controller
             dbCon.Close();
             return true;
         }
+
+        private String CreateQuery()
+        {
+
+            INSERT INTO `order_table`(idorder_table, date, name, address, phone, color, size, price, quantity, total_cost, status, notes) VALUES(0, 20210411, "test", "test address", 1111111111, "pink", "large", 1.00, 1, 1.00, "completed", "This is test data");
+
+        }
+
     }
+
 }
