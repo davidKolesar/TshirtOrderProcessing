@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2ekUEO89ceEVrTtda/LHLLiQPPtrbOnNcmnYI+wQ7G1Dd2/nUlmtJYYx80xzruDvywKCmUDDXzP4KLvM13CjJg==",
+  "dgSpecHash": "2+HtlkRnjPCoFRSTysWpYZ7dPyONwNq6wwHrXRcyePm7OVlV+943LYLD9J71F+NfBJxBNF4YfnGVxpk7rzyQag==",
   "success": true,
   "projectFilePath": "C:\\Users\\babyCows\\source\\repos\\TeeShirtOrderingWebApplication\\TeeShirtOrderingWebApplication\\TeeShirtOrderingWebApplication.csproj",
   "expectedPackageFiles": [
@@ -65,6 +65,7 @@
     "C:\\Users\\babyCows\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\babyCows\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\babyCows\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\babyCows\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512",
     "C:\\Users\\babyCows\\.nuget\\packages\\mysql.data\\8.0.23\\mysql.data.8.0.23.nupkg.sha512",
     "C:\\Users\\babyCows\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\babyCows\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
