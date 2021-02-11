@@ -17,8 +17,9 @@ namespace OrderProcessingApplication.Controller
         public String ProcessNewOrder([FromForm] Order order)
         {
             //create unique ID for order
-            String longGuid  = Guid.NewGuid().ToString("N");
-            order.Id = longGuid.Substring(0, 5);
+            Random rnd = new Random();
+            int randomId = rnd.Next(1, 50000);
+            order.Id = randomId.ToString();
 
             //set today's date for order
             order.Date = convertDate();
@@ -31,8 +32,11 @@ namespace OrderProcessingApplication.Controller
 
             //Create Order
             MySQLDAO mysqlDAO = new MySQLDAO();
-            mysqlDAO.ConnectToMySQLDatabase(order, "CREATE");
-
+            String response = mysqlDAO.ConnectToMySQLDatabase(order, "CREATE");
+            if(response is null)
+            {
+                return "connection error";
+            }
             return "order received";
         }
 

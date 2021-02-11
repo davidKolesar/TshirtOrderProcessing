@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TeeShirtOrderingWebApplication.Controller;
+using TeeShirtOrderingWebApplication.Model;
 
 namespace TeeShirtOrderingWebApplication.Controllers
 {
@@ -17,9 +18,9 @@ namespace TeeShirtOrderingWebApplication.Controllers
         public ContentResult RetrievePastOrders([FromForm] Order order)
         {
             MySQLDAO mysqlDAO = new MySQLDAO();
-            mysqlDAO.ConnectToMySQLDatabase(order, "READ");
-
-            return base.Content("<div>Hello</div>", "text/html");
+            String resultsTable = mysqlDAO.ConnectToMySQLDatabase(order, "READ");
+         
+            return base.Content("<div> " + resultsTable + "</div> ", "text/html");
         }
     }
 }

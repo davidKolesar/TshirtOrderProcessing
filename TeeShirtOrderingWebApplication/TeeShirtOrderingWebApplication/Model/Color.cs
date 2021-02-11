@@ -11,6 +11,7 @@ namespace OrderProcessingApplication.Model
             ORANGE,
             YELLOW,
             GREEN,
+            BLUE,
             INDIGO,
             VIOLET
     }

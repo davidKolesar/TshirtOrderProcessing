@@ -7,7 +7,7 @@
   <ItemGroup>
     <Content Include="Pages\Error.cshtml.cs" />
     <Content Include="Pages\Index.cshtml.cs" />
-    <Content Include="Pages\Privacy.cshtml.cs" />
+    <Content Include="Pages\ViewOrders.cshtml.cs" />
     <Content Include="Pages\Startup.cs" />
   </ItemGroup>
 

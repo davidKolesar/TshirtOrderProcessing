@@ -35,7 +35,7 @@
             <p></p>
 
             <!--size-->
-            <label for="Color">Color:</label><br>
+            <label for="Size">Size:</label><br>
             <select name="Size" id="Size" required>
                 <option value="Child">Child</option>
                 <option value="Small">Small</option>
@@ -56,8 +56,33 @@
             </textarea>
 
             <br><br>
-
-            <input type="submit" value="Submit">
+            <button onclick="return alertUser()">Place Order</button>
+            <!-- <input type="submit" value="Submit" onclick="return alertUser()">-->
         </fieldset>
     </form>
 </div>
+
+
+<script>
+    function alertUser() {
+        var customerName = document.getElementById("CustomerName").value;
+        var customerAddress = document.getElementById("CustomerAddress").value;
+        var customerPhone = document.getElementById("CustomerPhone").value;
+        var color = document.getElementById("Color").value;
+        var size = document.getElementById("Size").value;
+        var quantity = document.getElementById("Quantity").value;
+
+        var response = confirm("Name: " + customerName + " \r\n " +
+            "Address: " + customerAddress + " \r\n " +
+            "Phone: " + customerPhone + " \r\n " +
+            "Shirt Color: " + color + " \r\n " +
+            "Shirt Size: " + size + " \r\n " +
+            "Order Quantity: " + quantity + " \r\n " + "\r\n" +
+
+            "Are you sure this order information is correct?");
+
+        if (response == true) {
+            document.getElementById("submitOrderForm").submit();
+        }
+    }
+</script>
