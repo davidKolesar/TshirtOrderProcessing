@@ -10,7 +10,6 @@ namespace TeeShirtOrderingWebApplication.Controller
 {
     public class MySQLDAO
     {
-
         public String ConnectToMySQLDatabase(Order order, String query)
         {
                 var dbCon = Data.DBConnection.Instance();
@@ -27,10 +26,10 @@ namespace TeeShirtOrderingWebApplication.Controller
                 return null;
             }
 
-        public void AddOrder(Data.DBConnection dbCon, Order order)
+        public void ProcessQuery(Data.DBConnection dbCon, Order order, String sqlQuery)
         {
-            string query = "INSERT INTO `order_table`(idorder_table, date, name, address, phone, color, size, price, quantity, total_cost, status, notes) VALUES(" + "'" + order.Id + "', " + order.Date + ", '" + order.CustomerName + "', '" + order.CustomerAddress + "', " + order.CustomerPhone + ", '" + order.Color + "', '" + order.size + "', " + order.price + ", " + order.Quantity + ", " + order.TotalCost + ", '" + order.Status + "', '" + order.Notes + "' )";
-            MySqlCommand cmd = new MySqlCommand(query, dbCon.Connection);
+            MySqlCommand cmd = new MySqlCommand(sqlQuery, dbCon.Connection);
+
             var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -38,8 +37,11 @@ namespace TeeShirtOrderingWebApplication.Controller
                 string someStringFromColumnOne = reader.GetString(1);
                 Console.WriteLine(someStringFromColumnZero + "," + someStringFromColumnOne);
             }
+            reader.Close();
             dbCon.Close();
+            dbCon = null;
         }
+
 
         public String RetrieveAllOrders(Data.DBConnection dbCon)
         {
@@ -123,25 +125,35 @@ namespace TeeShirtOrderingWebApplication.Controller
                 sb.Append(tableDataClose);
                 sb.Append(tableRowClose);
             }
-            dbCon.Close();
             string resultsTable = sb.ToString();
+            reader.Close();
+            dbCon.Close();
+            dbCon = null;
             return resultsTable;
         }
 
         public String determineQuery(Data.DBConnection dbCon, Order order, String query)
         {
+
+            string addQuery = "INSERT INTO `order_table`(idorder_table, date, name, address, phone, color, size, price, quantity, total_cost, status, notes) VALUES(" + "'" + order.Id + "', " + order.Date + ", '" + order.CustomerName + "', '" + order.CustomerAddress + "', " + order.CustomerPhone + ", '" + order.Color + "', '" + order.size + "', " + order.price + ", " + order.Quantity + ", " + order.TotalCost + ", '" + order.Status + "', '" + order.Notes + "' )";
+
+            string removeQuery = "DELETE FROM order_table WHERE idorder_table = " + order.Id;
+
+            string updateQuery = "UPDATE order_table SET date = " + order.Date + ", name = '" + order.CustomerName + "', address = '" + order.CustomerAddress + "', phone = " + order.CustomerPhone + ", color = '" + order.Color + "', size = '" + order.size + "', price = " + order.price + ", quantity = " + order.Quantity + ", total_cost =" + order.TotalCost + ", status = '" + order.Status + "', notes ='" + order.Notes + "' WHERE idorder_table = " + order.Id;
+
             switch (query)
             {
                 case "CREATE":
-                    AddOrder(dbCon, order);
+                    ProcessQuery(dbCon, order, addQuery);
                     return "success";
                 case "READ":
-                    return RetrieveAllOrders(dbCon);
+                    String success = RetrieveAllOrders(dbCon);
+                    return success;
                 case "UPDATE":
-                    // code block
-                    break;
+                    ProcessQuery(dbCon, order, updateQuery);
+                    return "success";
                 case "DELETE":
-                    // code block
+                    ProcessQuery(dbCon, order, removeQuery);
                     break;
                 default:
                     return null;

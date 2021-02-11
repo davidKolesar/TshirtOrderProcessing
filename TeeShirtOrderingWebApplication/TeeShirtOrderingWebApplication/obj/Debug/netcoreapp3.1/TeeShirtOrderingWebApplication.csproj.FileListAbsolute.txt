@@ -179,3 +179,4 @@ C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWe
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.genruntimeconfig.cache
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.csprojAssemblyReference.cache
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\ViewOrders.cshtml.g.cs
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\UpdateOrder.cshtml.g.cs

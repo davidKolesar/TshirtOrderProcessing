@@ -9,44 +9,43 @@ using TeeShirtOrderingWebApplication.Controller;
 
 namespace OrderProcessingApplication.Controller
 {
-    [Route("ProcessNewOrder")]
+    [Route("updateExistingOrder", Name = "updateExistingOrder")]
     [ApiController]
-    public class ProcessOrder : ControllerBase
+    public class UpdateExistingOrder : ControllerBase
     {
         [HttpPost]
-        public RedirectResult ContentResult([FromForm] Order order)
+        public String updateExistingOrder([FromForm] Order order)
         {
-            //create unique ID for order
-            Random rnd = new Random();
-            int randomId = rnd.Next(1, 50000);
-            order.Id = randomId.ToString();
 
             //set today's date for order
             order.Date = convertDate();
 
             //calculate price
-            order = calculatePrices(order);
+            order = calculatPrices(order);
 
             //set status
             order.Status = Status.NEW;
 
+            //Server-Side validation
+            validateOrder(order);
+
+
             //Create Order
             MySQLDAO mysqlDAO = new MySQLDAO();
-            String response = mysqlDAO.ConnectToMySQLDatabase(order, "CREATE");
-            if(response is null)
+            String response = mysqlDAO.ConnectToMySQLDatabase(order, "UPDATE");
+            if (response is null)
             {
-                base.Content("<div> <p><b>Connection Error</b></p> <br><br> </div> ", "text/html");
+                return "connection error";
             }
-
-            return Redirect("https://localhost:44367/");
+            return "order received";
         }
 
-        public Boolean validateOrder([FromForm] Order order)
+        public Boolean validateOrder(Order order)
         {
             return true;
         }
 
-        public Order calculatePrices(Order order)
+        public Order calculatPrices(Order order)
         {
             double totalCost = 0;
             double CHILD_COST = 5.00;
@@ -79,7 +78,7 @@ namespace OrderProcessingApplication.Controller
         {
             DateTime currentDate = DateTime.Today;
             String dateAdjustedToSQL = currentDate.ToString("yyyyMMdd");
-            return  Int32.Parse(dateAdjustedToSQL);
+            return Int32.Parse(dateAdjustedToSQL);
         }
     }
 }
