@@ -1,0 +1,56 @@
+﻿@page
+@model OrderProcessingApplication.Model.Order
+@{
+    ViewData["Title"] = "Shirt Ordering Application";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Shirt Ordering Application</h1>
+    <p>Process an order</p>
+    <form id="submitOrderForm" enctype="multipart/form-data" action="/ProcessNewOrder" method="post">
+        <fieldset>
+            <!--Name-->
+            <label for="CustomerName">Customer Full Name:</label><br>
+            <input type="text" id="CustomerName" name="CustomerName" required><br>
+            
+            <!--address-->
+            <label for="CustomerAddress">Customer Address:</label><br>
+            <input type="text" id="CustomerAddress" name="CustomerAddress" required><br>
+
+            <!--phone-->
+            <label for="CustomerPhone">Customer Phone:</label><br>
+            <input type="number" id="CustomerPhone" name="CustomerPhone" required><br><br>
+
+            <!--color-->
+            <label for="Color">Color:</label><br>
+            <select name="Color" id="Color" required>
+                <option value="Red">Red</option>
+                <option value="Orange">Orange</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="Indigo">Indigo</option>
+                <option value="Violet">Violet</option>
+            </select>
+            <p></p>
+
+            <!--size-->
+            <label for="Size">Size:</label><br>
+            <input type="text" id="Size" name="Size" required><br><br>
+
+            <!--quantity-->
+            <label for="Quantity">Quantity:</label><br>
+            <input type="number" id="Quantity" name="Quantity" required><br><br>
+
+            <!--Notes-->
+            <label for="Notes">Notes:</label><br>
+
+            <textarea id="Notes" name="Notes" rows="4" cols="50">
+            </textarea>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</div>
