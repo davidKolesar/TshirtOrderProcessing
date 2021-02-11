@@ -1,8 +1,17 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Review Past Orders";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>Use this page to review Past orders.</p>
+
+
+<p>Process an order</p>
+<form id="retrievePastOrders" enctype="multipart/form-data" action="/RetrievePastOrders" method="Get">
+    <fieldset>
+        <br><br/>
+        <input type="submit" value="Review Past Orders">
+    </fieldset>
+</form>

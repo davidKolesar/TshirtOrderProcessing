@@ -1,7 +1,7 @@
 ﻿@page
 @model OrderProcessingApplication.Model.Order
 @{
-    ViewData["Title"] = "Shirt Ordering Application";
+    ViewData["Title"] = "The Cincinnati T-Shirt Company";
 }
 
 <div class="text-center">
@@ -12,7 +12,7 @@
             <!--Name-->
             <label for="CustomerName">Customer Full Name:</label><br>
             <input type="text" id="CustomerName" name="CustomerName" required><br>
-            
+
             <!--address-->
             <label for="CustomerAddress">Customer Address:</label><br>
             <input type="text" id="CustomerAddress" name="CustomerAddress" required><br>
@@ -35,8 +35,15 @@
             <p></p>
 
             <!--size-->
-            <label for="Size">Size:</label><br>
-            <input type="text" id="Size" name="Size" required><br><br>
+            <label for="Color">Color:</label><br>
+            <select name="Size" id="Size" required>
+                <option value="Child">Child</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="ExtraLarge">Extra Large</option>
+            </select>
+            <p></p>
 
             <!--quantity-->
             <label for="Quantity">Quantity:</label><br>

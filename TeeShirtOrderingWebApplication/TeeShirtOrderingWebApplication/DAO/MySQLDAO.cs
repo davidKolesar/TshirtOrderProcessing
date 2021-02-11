@@ -9,7 +9,7 @@ namespace TeeShirtOrderingWebApplication.Controller
 {
     public class MySQLDAO
     {
-        //private static String SELECT_ORDER = "SELECT idorder_table, name FROM order_table";
+
         public Boolean AddOrder(Order order)
         {
                 var dbCon = Data.DBConnection.Instance();
