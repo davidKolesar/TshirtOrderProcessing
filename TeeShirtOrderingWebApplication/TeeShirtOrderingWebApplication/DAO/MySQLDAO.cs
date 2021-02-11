@@ -29,11 +29,11 @@ namespace TeeShirtOrderingWebApplication.Controller
 
         public Boolean executeQuery(Data.DBConnection dbCon, Order order)
         {
+            string query = "INSERT INTO `order_table`(idorder_table, date, name, address, phone, color, size, price, quantity, total_cost, status, notes) VALUES(" + "'" + order.Id + "', " + order.Date + ", '" + order.CustomerName + "', '" + order.CustomerAddress + "', " + order.CustomerPhone + ", '" + order.Color + "', '" + order.size + "', " + order.price + ", " + order.Quantity + ", " + order.TotalCost + ", '" + order.Status + "', '" + order.Notes + "' )";
             MySqlCommand cmd = new MySqlCommand(query, dbCon.Connection);
             var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                string query = "INSERT INTO `order_table`(idorder_table, date, name, address, phone, color, size, price, quantity, total_cost, status, notes) VALUES(" + order.Id + "," + order.Date + "," + order.CustomerName + "," + order.CustomerAddress + "," +  order.CustomerPhone + "," +  order.Color + "," +  order.size + "," + order.price + "," + order.Quantity + "," + order.TotalCost + "," + order.Status + "," + order.Notes); ""
                 string someStringFromColumnZero = reader.GetString(0);
                 string someStringFromColumnOne = reader.GetString(1);
                 Console.WriteLine(someStringFromColumnZero + "," + someStringFromColumnOne);

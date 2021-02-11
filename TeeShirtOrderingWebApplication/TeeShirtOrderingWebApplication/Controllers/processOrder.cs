@@ -17,12 +17,14 @@ namespace OrderProcessingApplication.Controller
         public String ProcessNewOrder([FromForm] Order order)
         {
             //create unique ID for order
-            order.Id = new Guid();
+            String longGuid  = Guid.NewGuid().ToString("N");
+            order.Id = longGuid.Substring(0, 5);
+
             //set today's date for order
-            order.Date = DateTime.Today;
+            order.Date = convertDate();
 
             //calculate price
-            order.TotalCost = calculatPrices(order);
+            order = calculatPrices(order);
 
             //set status
             order.Status = Status.NEW;
@@ -34,12 +36,12 @@ namespace OrderProcessingApplication.Controller
             return "order received";
         }
 
-        public Boolean validateOrder ([FromForm] Order order)
+        public Boolean validateOrder([FromForm] Order order)
         {
             return true;
         }
 
-        public order calculatPrices(Order order)
+        public Order calculatPrices(Order order)
         {
             double totalCost = 0;
             double CHILD_COST = 5.00;
@@ -66,6 +68,13 @@ namespace OrderProcessingApplication.Controller
 
             order.TotalCost = totalCost;
             return order;
+        }
+
+        public int convertDate()
+        {
+            DateTime currentDate = DateTime.Today;
+            String dateAdjustedToSQL = currentDate.ToString("yyyyMMdd");
+            return  Int32.Parse(dateAdjustedToSQL);
         }
     }
 }

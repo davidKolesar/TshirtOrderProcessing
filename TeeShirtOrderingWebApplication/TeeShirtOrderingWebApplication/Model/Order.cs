@@ -8,8 +8,8 @@ namespace OrderProcessingApplication.Model
 {
     public class Order
     {
-        public Guid Id { get; set; }
-        public DateTime Date { get; set; }
+        public String Id { get; set; }
+        public int  Date { get; set; }
         [BindProperty]
         public string CustomerName { get; set; }
         [BindProperty]
