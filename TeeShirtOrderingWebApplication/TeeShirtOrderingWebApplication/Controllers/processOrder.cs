@@ -38,7 +38,8 @@ namespace OrderProcessingApplication.Controller
                 base.Content("<div> <p><b>Connection Error</b></p> <br><br> </div> ", "text/html");
             }
 
-            return Redirect("https://localhost:44367/");
+            // return Redirect("https://localhost:44367/");
+            return Redirect("https://localhost:44367/SuccessfulTransaction");
         }
 
         public Boolean validateOrder([FromForm] Order order)

@@ -2,6 +2,7 @@
 using OrderProcessingApplication.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,8 +29,12 @@ namespace TeeShirtOrderingWebApplication.Controller
 
         public void ProcessQuery(Data.DBConnection dbCon, Order order, String sqlQuery)
         {
-            MySqlCommand cmd = new MySqlCommand(sqlQuery, dbCon.Connection);
+            if(dbCon.Connection.State != ConnectionState.Open)
+            {
+                dbCon.Connection.Open();
+            }
 
+            MySqlCommand cmd = new MySqlCommand(sqlQuery, dbCon.Connection);
             var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -45,6 +50,11 @@ namespace TeeShirtOrderingWebApplication.Controller
 
         public String RetrieveAllOrders(Data.DBConnection dbCon)
         {
+            if (dbCon.Connection.State != ConnectionState.Open)
+            {
+                dbCon.Connection.Open();
+            }
+
             string query = "SELECT * FROM order_table;";
             MySqlCommand cmd = new MySqlCommand(query, dbCon.Connection);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -129,6 +139,7 @@ namespace TeeShirtOrderingWebApplication.Controller
             reader.Close();
             dbCon.Close();
             dbCon = null;
+
             return resultsTable;
         }
 

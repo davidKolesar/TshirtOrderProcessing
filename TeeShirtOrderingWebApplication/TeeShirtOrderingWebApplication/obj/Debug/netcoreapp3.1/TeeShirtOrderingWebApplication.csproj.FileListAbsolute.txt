@@ -163,7 +163,6 @@ C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWe
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.TagHelpers.input.cache
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.TagHelpers.output.cache
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.RazorCoreGenerate.cache
-C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\processOrder.cshtml.g.cs
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
@@ -180,3 +179,4 @@ C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWe
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\TeeShirtOrderingWebApplication.csprojAssemblyReference.cache
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\ViewOrders.cshtml.g.cs
 C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\UpdateOrder.cshtml.g.cs
+C:\Users\babyCows\source\repos\TeeShirtOrderingWebApplication\TeeShirtOrderingWebApplication\obj\Debug\netcoreapp3.1\Razor\Pages\SuccessfulTransaction.cshtml.g.cs

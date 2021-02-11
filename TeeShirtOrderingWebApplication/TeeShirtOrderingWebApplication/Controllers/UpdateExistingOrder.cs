@@ -14,7 +14,7 @@ namespace OrderProcessingApplication.Controller
     public class UpdateExistingOrder : ControllerBase
     {
         [HttpPost]
-        public String updateExistingOrder([FromForm] Order order)
+        public RedirectResult updateExistingOrder([FromForm] Order order)
         {
 
             //set today's date for order
@@ -35,9 +35,9 @@ namespace OrderProcessingApplication.Controller
             String response = mysqlDAO.ConnectToMySQLDatabase(order, "UPDATE");
             if (response is null)
             {
-                return "connection error";
+                base.Content("<div> <p><b>Connection Error</b></p> <br><br> </div> ", "text/html");
             }
-            return "order received";
+            return Redirect("https://localhost:44367/SuccessfulTransaction");
         }
 
         public Boolean validateOrder(Order order)

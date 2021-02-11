@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Error - Copy.cshtml.cs" />
     <Compile Remove="Pages\Shared\Index.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Pages\Error.cshtml.cs" />
     <Content Include="Pages\Index.cshtml.cs" />
     <Content Include="Pages\UpdateOrder.cshtml.cs" />
     <Content Include="Pages\ViewOrders.cshtml.cs" />
