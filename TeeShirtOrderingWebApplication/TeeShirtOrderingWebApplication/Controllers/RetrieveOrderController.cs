@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TeeShirtOrderingWebApplication.Controller;
 
 namespace TeeShirtOrderingWebApplication.Controllers
 {
@@ -13,10 +14,12 @@ namespace TeeShirtOrderingWebApplication.Controllers
     public class RetrieveOrderController : ControllerBase
     {
         [HttpGet]
-        public String RetrievePastOrders([FromForm] Order order)
+        public ContentResult RetrievePastOrders([FromForm] Order order)
         {
+            MySQLDAO mysqlDAO = new MySQLDAO();
+            mysqlDAO.ConnectToMySQLDatabase(order, "READ");
 
-            return "Past Orders";
+            return base.Content("<div>Hello</div>", "text/html");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace OrderProcessingApplication.Controller
 
             //Create Order
             MySQLDAO mysqlDAO = new MySQLDAO();
-            mysqlDAO.AddOrder(order);
+            mysqlDAO.ConnectToMySQLDatabase(order, "CREATE");
 
             return "order received";
         }
